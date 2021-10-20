@@ -466,7 +466,7 @@ class WorkerInfo extends AsynchronouslyCreatedResource {
     } catch (err) {
       // This would mostly happen if e.g. message contains unserializable data
       // or transferList is invalid.
-      taskInfo.done(err);
+      taskInfo.done(err as Error);
       return;
     }
 
